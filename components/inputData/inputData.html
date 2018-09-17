@@ -1,0 +1,22 @@
+<div class="modal fade" id="Modal-inputData" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white">
+                    &times;
+                </button>
+                <h5 class="modal-title" id="myModalLabel">
+                    数据导入
+                </h5>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-title"><h5>选择数据</h5></div>
+                <div class="modal-body-text">
+                    <input type="file" id="fileinput" style="opacity: 0;"/>
+                    <input type="text" id="textfiled" value="请选择数据（.json）..."  onclick="$('#fileinput').click();"/>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>

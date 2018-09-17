@@ -1,0 +1,2987 @@
+{"version": 8,
+  "name":"白天版",
+  "metadata":{
+    "deqing:autocomposite": true,
+    "deqing:type": "template",
+    "deqing:groups": {
+      "居民地点":{
+        "name": "居民地点",
+        "collapsed": true
+      },
+      "POI":{
+        "name": "POI",
+        "collapsed": true
+      },
+      "交通网线注记":{
+        "name": "交通网线注记",
+        "collapsed": true
+      },
+      "交通网线":{
+        "name": "交通网线",
+        "collapsed": true
+      },
+      "铁路线":{
+        "name": "铁路线",
+        "collapsed": true
+      },
+      "境界线":{
+        "name": "境界线",
+        "collapsed": true
+      },
+      "水系面":{
+        "name": "水系面",
+        "collapsed": true
+      },
+      "居民地面":{
+        "name": "居民地面",
+        "collapsed": true
+      },
+      "植被面":{
+        "name": "植被面",
+        "collapsed": true
+      },
+      "境界面":{
+        "name": "境界面",
+        "collapsed": true
+      },
+      "山体阴影":{
+        "name": "山体阴影",
+        "collapsed": true
+      }
+    }
+  },
+  "sources": {
+    "deqing": {
+      "type": "vector",
+      "scheme": "tms",
+      "tiles": [
+        "http://localhost:5089/tiles/{z}/{x}/{y}.pbf"
+      ]
+    }
+  },
+  "sprite": "http://localhost:5089/sprite/sprite",
+  "glyphs": "./fonts/font/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "背景",
+      "type": "background",
+      "layout": {},
+      "paint": {
+        "background-color": "white"
+      },
+      "interactive": true
+    },
+    {
+      "id": "地级行政区域",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "境界面"
+      },
+      "source": "deqing",
+      "source-layer": "BOU_PY",
+      "minzoom": 8,
+      "filter": [
+        "==", "FCODE", "6401000500"
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(55, 11%, 96%)",
+        "fill-opacity":1
+      }
+    },
+    {
+      "id": "池塘_19",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 19,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301020500"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "池塘_18",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 18,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301020500"],
+        ["<=","FSCALE",18]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "池塘_17",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301020500"],
+        ["<=","FSCALE",17]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "池塘_16",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301020500"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "池塘_15",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301020500"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "地面河流_19",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 19,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2101010500"],
+        ["<=","FSCALE",18]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "地面河流_17",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2101010500"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "地面河流_15",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2101010500"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "地面河流_13",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2101010500"],
+        ["<=","FSCALE",12],
+        [">=","Shape_Area", 5e-005]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "地面河流_10",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2101010500"],
+        ["<=","FSCALE",11],
+        [">=","Shape_Area", 5e-005]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "湖泊",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301010500"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "水库_16",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE",  "2401010500"],
+        ["<=","FSCALE",16],
+        [">=","Shape_Area", 1e-006]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "水库_15",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE",  "2401010500"],
+        ["<=","FSCALE",15],
+        [">=","Shape_Area", 1e-006]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "水库_7",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE",  "2401010500"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "运河",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "水系面"
+      },
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2201000500"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(185, 9%, 81%)"
+      }
+    },
+    {
+      "id": "居民地_17",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "居民地面"
+      },
+      "source": "deqing",
+      "source-layer": "RES_PY",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "3103011500","3404010500","3104000500","3105000500","3105010500","3106000500","3108000500","3109000500"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(55, 5%, 91%)",
+        "fill-opacity": {
+          "base": 1,
+          "stops": [
+            [16, 0.5], [17, 1]
+          ]
+        },
+        "fill-outline-color": "hsl(55, 3%, 87%)",
+        "fill-antialias": true
+      }
+    },
+    {
+      "id": "居民地_16",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "居民地面"
+      },
+      "source": "deqing",
+      "source-layer": "RES_PY",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "3103011500","3404010500","3104000500","3105000500","3105010500","3106000500"],
+        [">","Shape_Area",3e-008]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(55, 5%, 91%)",
+        "fill-opacity": {
+          "base": 1,
+          "stops": [
+            [16, 0.5], [17, 1]
+          ]
+        },
+        "fill-outline-color": "hsl(55, 3%, 87%)",
+        "fill-antialias": true
+      }
+    },
+    {
+      "id": "花圃花坛_18",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "植被面"
+      },
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 18,
+      "filter": [
+        "all",
+        ["in","FCODE","8202000500"],
+        ["<=","FSCALE",18]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(150, 6%, 93%)",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "花圃花坛_17",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "植被面"
+      },
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in","FCODE","8202000500"],
+        ["<=","FSCALE",17]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(150, 6%, 93%)",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "花圃花坛_16",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "植被面"
+      },
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in","FCODE","8202000500"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(150, 6%, 93%)",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "花圃花坛_15",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "植被面"
+      },
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in","FCODE","8202000500"],
+        ["<=","FSCALE",15],
+        [">","Shape_Area",3e-008]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(150, 6%, 93%)",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "花圃花坛_14",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "植被面"
+      },
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in","FCODE","8202000500"],
+        ["<=","FSCALE",14],
+        [">","Shape_Area",3e-008]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(150, 6%, 93%)",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "人工绿地",
+      "type": "fill",
+      "metadata": {
+        "deqing:group": "植被面"
+      },
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        ["in","FCODE","8201000500"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(150, 6%, 93%)",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "乡级行政区界线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "境界线"
+      },
+      "source": "deqing",
+      "source-layer": "BOU_LN",
+      "minzoom": 10,
+      "filter": [
+        "==",
+        "FCODE",
+        "6602011314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "hsl(0, 0%, 63%)",
+        "line-width": 1,
+        "line-dasharray": [4, 4]
+      }
+    },
+    {
+      "id": "铁路_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "铁路线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_LRR_LN",
+      "minzoom": 9,
+      "filter": [
+        "in",
+        "FCODE",
+        "4101020314", "4101010314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#e8edeb",
+        "line-width": 4
+      }
+    },
+    {
+      "id": "铁路",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "铁路线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_LRR_LN",
+      "minzoom": 9,
+      "filter": [
+        "in",
+        "FCODE",
+        "4101020314", "4101010314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": 2,
+        "line-dasharray": [5, 5]
+      }
+    },
+    {
+      "id": "乡道_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4204000313"],
+        ["<=","FSCALE",17]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "内部道路_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4306000313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [12, 0.5], [13, 1], [14, 4], [20, 13]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [13.99, 0], [14, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "匝道_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4206000313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "支线_16_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305030313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "支线_15_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305030313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "县道_13_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "县道_12_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_17_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_16_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_15_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_14_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_13_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_16_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_15_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_14_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_13_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_12_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_11_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "省道_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4202010313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "国道_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "any",
+        ["in", "FCODE", "4201010313"],
+        ["in", "FCODE2", "4201010313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [5, 0.4], [6, 0.6], [7, 1.5], [20, 22]
+          ]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [9.99, 0], [10, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "乡道",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4204000313"],
+        ["<=","FSCALE",17]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [5, 0], [5.5, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "内部道路",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4306000313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [13.5, 0], [14, 2.5], [20, 9.5]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": 0.8
+      },
+      "interactive": true
+    },
+    {
+      "id": "匝道",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4206000313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [5, 0], [5.5, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "支线_16",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305030313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [16, 0.8], [17, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "支线_15",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305030313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [15, 0.8], [16, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "县道_13",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [5, 0], [5.5, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "县道_12",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [5, 0], [5.5, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_17",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [16, 0.4], [17, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_16",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [15, 0.4], [16, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_15",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [14, 0.4], [16, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_14",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [13, 0.4], [14, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_13",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff"
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_16",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [5, 0], [5.5, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_15",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [5, 0], [5.5, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_14",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [5, 0], [5.5, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_13",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [5, 0], [5.5, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_12",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [5, 0], [5.5, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_11",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [5, 0], [5.5, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "省道",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4202010313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        },
+        "line-color": "#fff",
+        "line-opacity": {
+          "base": 1.2,
+          "stops": [
+            [5, 0], [5.5, 1]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "国道",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "any",
+        ["in", "FCODE", "4201010313"],
+        ["in", "FCODE2", "4201010313"]
+      ],
+      "layout": {},
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [7, 0.5], [20, 18]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "高速公路_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4200010313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "base": 1.5,
+          "stops": [
+            [10, 1], [16, 2]]
+        },
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [9, "hsl(156, 7%, 87%)"],
+            [11, "#e8edeb"]
+          ]
+        },
+        "line-gap-width": {
+          "base": 1.5,
+          "stops": [
+            [5, 0.75], [18, 32]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "高速公路",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "交通网线"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4200010313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-opacity": 1,
+        "line-width": {
+          "base": 1.5,
+          "stops": [
+            [5, 0.75],  [18, 32]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "地级行政区界线_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "境界线"
+      },
+      "source": "deqing",
+      "source-layer": "BOU_LN1",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["==", "FCODE", "6402011314"]
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "hsl(29, 12%, 86%)",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [10, 9], [15, 16]
+          ]
+        },
+        "line-offset":-2
+      }
+    },
+    {
+      "id": "县级行政区界线_边线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "境界线"
+      },
+      "source": "deqing",
+      "source-layer": "BOU_LN1",
+      "minzoom": 8,
+      "filter": [
+        "==", "FCODE", "6502011314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "hsl(29, 12%, 86%)",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [10, 9], [15, 16]
+          ]
+        },
+        "line-offset":-2
+      }
+    },
+    {
+      "id": "地级行政区界线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "境界线"
+      },
+      "source": "deqing",
+      "source-layer": "BOU_LN1",
+      "minzoom": 8,
+      "filter": [
+        "==", "FCODE", "6402011314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "hsl(37, 21%, 47%)",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [10, 4], [15, 9]
+          ]
+        }
+      }
+    },
+    {
+      "id": "县级行政区界线",
+      "type": "line",
+      "metadata": {
+        "deqing:group": "境界线"
+      },
+      "source": "deqing",
+      "source-layer": "BOU_LN1",
+      "minzoom": 8,
+      "filter": [
+        "==", "FCODE", "6502011314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "hsl(37, 21%, 47%)",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [10, 4], [15, 9]
+          ]
+        }
+      }
+    },
+    {
+      "id": "POI_火车站",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "POI"
+      },
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        ["in", "FCODE", "170102"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "rail-11"],
+            [15, "rail-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "hsl(0, 0%, 30%)",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "内部道路_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 18,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4306000313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "支线_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305030313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "县道_13_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "县道_12_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_17_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_16_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_15_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_14_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "次干道_13_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_16_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_15_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_14_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_13_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_12_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "主干道_11_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "省道_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4202010313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "国道_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4201010313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [11, 13], [19, 20]
+          ]
+        },
+        "text-letter-spacing":0.5,
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "高速公路_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "交通网线注记"
+      },
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4200010313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [11, 13], [19, 20]
+          ]
+        },
+        "text-letter-spacing":0.5,
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#6B6B6B",
+        "text-halo-color": "rgba(255,255,255, 0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0
+      },
+      "interactive": true
+    },
+    {
+      "id": "自然村_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "居民地点"
+      },
+      "source": "deqing",
+      "source-layer": "RES_PT",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["==", "FCODE", "3101080106"]
+      ],
+      "layout": {
+        "icon-image":"dot-11",
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1.2,
+          "stops": [[10, 10], [15, 18]]
+        },
+        "text-anchor": "left",
+        "text-offset": [0.6, 0]
+      },
+      "paint": {
+        "icon-opacity":0.8,
+        "text-color": "hsl(0, 0%, 55%)",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.25
+      },
+      "interactive": true
+    },
+    {
+      "id": "乡级政府_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "居民地点"
+      },
+      "source": "deqing",
+      "source-layer": "RES_PT",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "3111050106"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1.2,
+          "stops": [[9, 13], [16, 20]]
+        }
+      },
+      "paint": {
+        "text-color": {
+          "base": 1,
+          "stops": [
+            [10, "hsl(0, 0%, 65%)"],
+            [11, "hsl(0, 0%, 60%)"]
+          ]
+        },
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.25
+      },
+      "interactive": true
+    },
+    {
+      "id": "县级政府_注记",
+      "type": "symbol",
+      "metadata": {
+        "deqing:group": "居民地点"
+      },
+      "source": "deqing",
+      "source-layer": "RES_PT",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["==", "FCODE", "3111040106"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "star-11"],
+            [15, "star-15"]
+          ]
+        },
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1.2,
+          "stops": [[8, 14], [13, 20]]
+        },
+        "text-padding":2,
+        "text-anchor": "bottom",
+        "text-offset": [0, -0.3]
+      },
+      "paint": {
+        "text-color": "hsl(0, 0%, 30%)",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.25
+      },
+      "interactive": true
+    }
+  ]
+}
